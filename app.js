@@ -23,3 +23,5 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
 }
+const resources = performance.getEntriesByType("resource");
+console.log(resources);
