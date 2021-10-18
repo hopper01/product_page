@@ -25,3 +25,4 @@ function showSlides(n) {
 }
 const resources = performance.getEntriesByType("resource");
 console.log(resources);
+console.log("first");
