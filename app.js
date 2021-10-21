@@ -1,4 +1,4 @@
-console.log("first");
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -25,4 +25,4 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
 }
 const resources = performance.getEntriesByType("resource");
-console.log(resources);
+
