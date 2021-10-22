@@ -12,10 +12,9 @@ script-src 'self' 'unsafe-eval' 'unsafe-inline' *.visualwebsiteoptimizer.com app
 worker-src 'self' blob:;
 frame-src app.vwo.com *.visualwebsiteoptimizer.com;">
     <script type='text/javascript'>
-        document.onsecuritypolicyviolation = function a(e) {
-            console.log(e);
+        document.onsecuritypolicyviolation = function (e) {
             var report = 'CSP Violation Report: \n';
-            report = report + '\t' + `blockedURI: ${e.blockedURI}\t` + `violatedDirective: ${e.violatedDirective}\t\n` + `\toriginalPolicy: ${e.originalPolicy}`;
+            report = report + '\t' + `blockedURI: ${e.blockedURI}\t` + `violatedDirective: ${e.violatedDirective}`;
             console.log(report);
         }
     </script>
