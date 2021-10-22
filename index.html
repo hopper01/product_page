@@ -11,8 +11,16 @@ script-src 'self' 'unsafe-eval' 'unsafe-inline' *.visualwebsiteoptimizer.com app
  img-src 'self' *.visualwebsiteoptimizer.com chart.googleapis.com wingify-assets.s3.amazonaws.com app.vwo.com; 
 worker-src 'self' blob:;
 frame-src app.vwo.com *.visualwebsiteoptimizer.com;">
+    <script type='text/javascript'>
+        document.onsecuritypolicyviolation = function a(e) {
+            console.log(e);
+            var report = 'CSP Violation Report: \n';
+            report = report + '\t' + `blockedURI: ${e.blockedURI}\t` + `violatedDirective: ${e.violatedDirective}\t\n` + `\toriginalPolicy: ${e.originalPolicy}`;
+            console.log(report);
+        }
+    </script>
 
-<!-- <script src="k.js"></script>
+    <!-- <script src="k.js"></script>
     <script type='text/javascript'>
     console.log("second")
         window._vwo_code = window._vwo_code || (function () {
@@ -150,4 +158,5 @@ frame-src app.vwo.com *.visualwebsiteoptimizer.com;">
     <script defer src="p.js"></script>
 </body>
 <script src="s.js"></script>
+
 </html>

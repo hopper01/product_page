@@ -23,7 +23,9 @@ console.log(e);
 // console.log(report);
 
 
-
+//     document.onsecuritypolicyviolation = function a(e) {
+//     console.log(e);
+// }
 
 
 //    var req = new XMLHttpRequest();
