@@ -11,13 +11,8 @@ script-src 'self' 'unsafe-eval' 'unsafe-inline' *.visualwebsiteoptimizer.com app
  img-src 'self' *.visualwebsiteoptimizer.com chart.googleapis.com wingify-assets.s3.amazonaws.com app.vwo.com; 
 worker-src 'self' blob:; localhost:4443/main.js;
 frame-src app.vwo.com *.visualwebsiteoptimizer.com;">
-    <script type='text/javascript'>
-        document.onsecuritypolicyviolation = function (e) {
-            var report = 'CSP Violation Report: \n';
-            report = report + '\t' + `blockedURI: ${e.blockedURI}\t` + `violatedDirective: ${e.violatedDirective}`;
-            console.log(report);
-        }
-    </script>
+
+
 
     <!-- <script src="k.js"></script>
     <script type='text/javascript'>
