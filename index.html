@@ -4,19 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' blob:;
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' blob:;
 connect-src  *.visualwebsiteoptimizer.com app.vwo.com; 
 style-src 'self' 'unsafe-inline' *.visualwebsiteoptimizer.com app.vwo.com; 
 script-src 'self' 'unsafe-eval' 'unsafe-inline' *.visualwebsiteoptimizer.com app.vwo.com;
  img-src 'self' *.visualwebsiteoptimizer.com chart.googleapis.com wingify-assets.s3.amazonaws.com app.vwo.com; 
 worker-src 'self' blob:; localhost:4443/main.js;
-frame-src app.vwo.com *.visualwebsiteoptimizer.com;"> -->
-
-
-
-    <script src="k.js"></script>
+frame-src app.vwo.com *.visualwebsiteoptimizer.com;">
     <script type='text/javascript'>
-
         window._vwo_code = window._vwo_code || (function () {
             var account_id = 587845,
                 settings_tolerance = 2000,
@@ -28,28 +23,43 @@ frame-src app.vwo.com *.visualwebsiteoptimizer.com;"> -->
                 /* DO NOT EDIT BELOW THIS LINE */
                 f = false, d = document, code = {
                     use_existing_jquery: function () {return use_existing_jquery;}, library_tolerance: function () {return library_tolerance;},
-                     finish: function () {if (!f) {
-                         f = true; var a = d.getElementById('_vis_opt_path_hides');
-                        if (a) a.parentNode.removeChild(a);} },
-                     finished: function () {return f;}, 
-                     load: function (a) {var b = d.createElement('script'); b.src = a; b.type = 'text/javascript'; b.innerText; b.onerror = function () {_vwo_code.finish();}; d.getElementsByTagName('head')[0].appendChild(b);}, 
+                    finish: function () {
+                        if (!f) {
+                            f = true; var a = d.getElementById('_vis_opt_path_hides');
+                            if (a) a.parentNode.removeChild(a);
+                        }
+                    },
+                    finished: function () {return f;},
+                    load: function (a) {var b = d.createElement('script'); b.src = a; b.type = 'text/javascript'; b.innerText; b.onerror = function () {_vwo_code.finish();}; d.getElementsByTagName('head')[0].appendChild(b);},
                     init: function () {
-                        window.settings_timer = setTimeout(function () {_vwo_code.finish()}, 
-                        settings_tolerance); 
+                        window.settings_timer = setTimeout(function () {_vwo_code.finish()},
+                            settings_tolerance);
                         var a = d.createElement('style'),
-                         b = hide_element ? hide_element + '{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}' : '', 
-                         h = d.getElementsByTagName('head')[0];
-                          a.setAttribute('id', '_vis_opt_path_hides');
-                           a.setAttribute('type', 'text/css'); 
-                           if (a.styleSheet) a.styleSheet.cssText = b; 
-                           else a.appendChild(d.createTextNode(b)); 
-                           h.appendChild(a); 
-                           this.load('https://dev.visualwebsiteoptimizer.com/j.php?a=' + account_id + '&u=' + encodeURIComponent(d.URL) + '&f=' + (+is_spa) + '&r=' + Math.random()); 
-                           return settings_timer;
+                            b = hide_element ? hide_element + '{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}' : '',
+                            h = d.getElementsByTagName('head')[0];
+                        a.setAttribute('id', '_vis_opt_path_hides');
+                        a.setAttribute('type', 'text/css');
+                        if (a.styleSheet) a.styleSheet.cssText = b;
+                        else a.appendChild(d.createTextNode(b));
+                        h.appendChild(a);
+                        this.load('https://dev.visualwebsiteoptimizer.com/j.php?a=' + account_id + '&u=' + encodeURIComponent(d.URL) + '&f=' + (+is_spa) + '&r=' + Math.random());
+                        return settings_timer;
                     }
                 }; window._vwo_settings_timer = code.init(); return code;
         }());
     </script>
+
+    <script type="text/javascript">
+        document.onsecuritypolicyviolation = function (e) {
+            let cspError = ['cspE'];
+            cspError.push(e.blockedURI, e.violatedDirective, e.sourceFile, e.lineNumber);
+            if (!_vwo_evq) return;
+            _vwo_evq.push(cspError);
+        };
+    </script>
+
+
+
 
     <!-- <script src="https://kit.fontawesome.com/fa0bd588ce.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="style.css">
@@ -151,6 +161,5 @@ frame-src app.vwo.com *.visualwebsiteoptimizer.com;"> -->
     <script src="app.js" rel="preload"></script>
     <script defer src="p.js"></script>
 </body>
-<script src="s.js"></script>
 
 </html>

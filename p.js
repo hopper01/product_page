@@ -48,7 +48,6 @@ function nothing() {
 //    var header = req.getResponseHeader('last-modified');
 //    console.log(object);
 // }
-
 // var oReq = new XMLHttpRequest();
 // oReq.addEventListener("load", reqListener);
 // oReq.open("GET", document.location, false);
