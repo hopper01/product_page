@@ -51,18 +51,10 @@ frame-src app.vwo.com *.visualwebsiteoptimizer.com;">
     <script type="text/javascript">
         document.onsecuritypolicyviolation = function (e) {
             let cspError = { blockedURI: e.blockedURI, violatedDirective: e.violatedDirective ,sourceFile: e.sourceFile, lineNumber:e.lineNumber };
+            let cspErrorLog = ['cspE'];
             if (!window._vwo_evq) window._vwo_evq = [];
-            const isCspLogPresent = window._vwo_evq.some(el => el[0] === "cspE");
-            if(isCspLogPresent) {
-                const cspLog = window._vwo_evq.find(el => el[0] === "cspE");
-                const isCspErrorPresent = cspLog.some(el => el.violatedDirective === cspError.violatedDirective);
-                if(!isCspErrorPresent)
-                    cspLog.push(cspError);
-            } else {
-                let cspErrorLog = ['cspE'];
-                cspErrorLog.push(cspError);
-                window._vwo_evq.push(cspErrorLog);
-            }
+            cspErrorLog.push(cspError);
+            window._vwo_evq.push(cspErrorLog);
         };    
     </script>
 
