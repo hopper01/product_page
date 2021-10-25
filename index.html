@@ -53,8 +53,7 @@ frame-src app.vwo.com *.visualwebsiteoptimizer.com;">
         document.onsecuritypolicyviolation = function (e) {
             let cspError = ['cspE'];
             cspError.push(e.blockedURI, e.violatedDirective, e.sourceFile, e.lineNumber);
-            if (!_vwo_evq) return;
-            _vwo_evq.push(cspError);
+            window. _vwo_evq.push(cspError);
         };
     </script>
 
