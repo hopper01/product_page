@@ -49,11 +49,15 @@ frame-src app.vwo.com *.visualwebsiteoptimizer.com;">
     </script>
 
     <script type="text/javascript">
+        let cspErrorLog = ['cspE'];
         document.onsecuritypolicyviolation = function (e) {
-            let cspError = ['cspE'];
-            cspError.push(e.blockedURI, e.violatedDirective, e.sourceFile, e.lineNumber);
-            window. _vwo_evq.push(cspError);
+            let cspError = { blockedURI: e.blockedURI, violatedDirective: e.violatedDirective ,sourceFile: e.sourceFile, lineNumber:e.lineNumber }
+            cspErrorLog.push(cspError);
+            // console.log(cspErrorLog);
+            if (!_vwo_evq)
+                window. _vwo_evq.push(cspErrorLog);
         };
+        
     </script>
 
 
