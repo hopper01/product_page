@@ -55,7 +55,7 @@ frame-src app.vwo.com *.visualwebsiteoptimizer.com;">
             const isCspLogPresent = window._vwo_evq.some(el => el[0] === "cspE");
             if(isCspLogPresent) {
                 const cspLog = window._vwo_evq.find(el => el[0] === "cspE");
-                const isCspErrorPresent = cspLog.some(el => el.lineNumber === cspError.lineNumber);
+                const isCspErrorPresent = cspLog.some(el => el.violatedDirective === cspError.violatedDirective);
                 if(!isCspErrorPresent)
                     cspLog.push(cspError);
             } else {
