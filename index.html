@@ -50,15 +50,11 @@ frame-src app.vwo.com *.visualwebsiteoptimizer.com;">
 
     <script type="text/javascript">
         document.onsecuritypolicyviolation = function (e) {
-            let cspError = { blockedURI: e.blockedURI, violatedDirective: e.violatedDirective ,sourceFile: e.sourceFile, lineNumber:e.lineNumber };
-            let cspErrorLog = ['cspE'];
+            let cspError = ['cspE', `${e.blockedURI},,${e.violatedDirective},,${e.lineNumber},,${e.sourceFile}`];
             if (!window._vwo_evq) window._vwo_evq = [];
-            cspErrorLog.push(cspError);
-            window._vwo_evq.push(cspErrorLog);
-        };    
+            window._vwo_evq.push(cspError);
+        };
     </script>
-
-
 
 
     <!-- <script src="https://kit.fontawesome.com/fa0bd588ce.js" crossorigin="anonymous"></script> -->
